@@ -12,7 +12,8 @@ public final class SampleView extends View
 	public SampleView(String _title)
 	{
 		// NOTE: 프레임의 제목을 설정하고 가로, 세로 해상도를 설정합니다.
-		super(_title, 600, 480);
+		// 600 x 480
+		super(_title);
 
 		/*
 		 * TODO:

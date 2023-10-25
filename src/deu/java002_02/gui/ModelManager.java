@@ -1,6 +1,5 @@
 package deu.java002_02.gui;
 
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ModelManager

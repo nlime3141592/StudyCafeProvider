@@ -7,15 +7,14 @@ import javax.swing.JFrame;
 
 public abstract class View extends JFrame implements WindowListener
 {
-	public View(String _title, int _width, int _height)
+	public View(String _title)
 	{
+		super.setLayout(null);
 		super.setTitle(_title);
-		super.setSize(_width, _height);
 		super.setResizable(false);
 		super.setLocationRelativeTo(null);
 		super.addWindowListener(this);
 		super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		super.setVisible(true);
 	}
 
 	@Override
@@ -49,4 +48,12 @@ public abstract class View extends JFrame implements WindowListener
 	public void windowDeactivated(WindowEvent e) { }
 
 	public abstract Model getModel();
+
+	public final void openView(int _width, int _height)
+	{
+		super.setVisible(true);
+		int hInset = super.getInsets().left + super.getInsets().right;
+		int vInset = super.getInsets().bottom + super.getInsets().top;
+		super.setSize(_width + hInset, _height + vInset);
+	}
 }

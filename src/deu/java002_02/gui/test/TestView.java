@@ -16,7 +16,8 @@ public class TestView extends View
 
 	public TestView(String _title)
 	{
-		super(_title, 600, 480);
+		// 600 x 480
+		super(_title);
 
 		super.setLayout(new BorderLayout());
 
